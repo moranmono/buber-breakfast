@@ -11,5 +11,11 @@ public class BuberBreakfastDbContext: DbContext
         
     }
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(BuberBreakfastDbContext).Assembly);
+        base.OnModelCreating(modelBuilder);
+    }
+
     public DbSet<Breakfast> Breakfasts { get; set; } = null!;
 }
