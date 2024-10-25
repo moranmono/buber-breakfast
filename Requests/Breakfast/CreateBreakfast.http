@@ -2,8 +2,8 @@ POST http://localhost:5286/breakfasts
 Content-Type: application/json
 
 {
-    "name": "V",
-    "description": "",
+    "name": "Vegan test",
+    "description": "Delicious quinoa salad with fresh vegetables and tangy lemon dressing.",
     "startDateTime": "2022-04-08T08:00:00",
     "endDateTime": "2022-04-08T11:00:00",
     "savory": [
