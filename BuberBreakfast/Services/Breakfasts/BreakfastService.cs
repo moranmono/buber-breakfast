@@ -46,7 +46,7 @@ public class BreakfastService : IBreakfastService
 
     public ErrorOr<UpsertedBreakfast> UpsertBreakfast(Breakfast breakfast)
     {
-        var isNewlyCreated = _breakfastsDbContext.Breakfasts.Find(breakfast.Id) is not Breakfast dbBreakfast;
+        var isNewlyCreated = !_breakfastsDbContext.Breakfasts.Any(b => b.Id == breakfast.Id);
         if (isNewlyCreated)
         {
             _breakfastsDbContext.Add(breakfast);
