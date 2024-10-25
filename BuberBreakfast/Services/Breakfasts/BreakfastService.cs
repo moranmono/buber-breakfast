@@ -28,7 +28,7 @@ public class BreakfastService : IBreakfastService
         {
             return Errors.Breakfast.NotFound;
         }
-        _breakfastsDbContext.Remove(id);
+        _breakfastsDbContext.Remove(breakfast);
         _breakfastsDbContext.SaveChanges();
 
         return Result.Deleted;
